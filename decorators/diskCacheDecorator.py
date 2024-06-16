@@ -1,10 +1,10 @@
 # ALL YOU NEED IS THE FOLLOWING CODE AND THE IMPORT STATEMENTS ################
 
-# Useful information about the decorator ######################################
-# The decorator caches the results of a function on disk
-# The decorator saves the results of the function to a pkl file (binary file)
-# The decorator is useful if you have a function that takes a long time to run
-###############################################################################
+'''Useful information about the decorator
+ - The decorator caches the results of a function on disk
+ - The decorator saves the results of the function to a pkl file (binary file)
+ - The decorator is useful if you have a function that takes a long time to run
+'''
 
 
 import os
@@ -45,3 +45,35 @@ def diskCache(cacheDir: str = "cache") -> callable:
             return result
         return wrapper
     return decorator
+
+
+###############################################################################
+# Generic example of how to use the decorator #################################
+###############################################################################
+
+
+@diskCache()  # Decorate your function with the diskCache decorator
+def yourFunctionName(arg):  # Define your function here
+    ...  # Your function code here
+    return arg  # Return the result if needed
+
+
+###############################################################################
+# Simple of how to use the decorator ##########################################
+###############################################################################
+
+
+import time
+
+
+@diskCache()
+def expensiveComputation(x):
+    time.sleep(2)
+    return x * x
+
+
+# Test the decorator
+print(expensiveComputation(4))  # takes 2 seconds
+print(expensiveComputation(4))  # returns immediately
+
+###############################################################################
