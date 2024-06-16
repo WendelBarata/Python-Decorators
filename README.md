@@ -4,3 +4,7 @@ This is a project designed to provide a series of python decorators that can be 
 1. Time counter
 
 Decorator for functions that calculate execution time.
+
+2. log
+
+Returns the inputs and output of the function
