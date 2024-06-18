@@ -7,8 +7,12 @@ Decorator for functions that calculate execution time.
 
 2. log
 
-Returns the inputs and output of the function
+Returns the inputs and output of the function.
 
 3. Disk Cache
 
 Stores the result of running the function for future use if necessary.
+
+4. Rate limit
+
+Limits the number of calls to a function within a time period.
