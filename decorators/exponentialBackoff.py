@@ -1,3 +1,22 @@
+# ALL YOU NEED IS THE FOLLOWING CODE TO IMPLEMENT THE DECORATOR ###############
+
+""" Useful information about the decorator
+- The exponential backoff algorithm is a technique used to prevent a system
+  from being overwhelmed with requests.
+- It is commonly used in network protocols, such as HTTP, to automatically
+  retry requests that have failed due to a temporary error.
+- The algorithm works by increasing the delay between retries exponentially,
+  with each subsequent retry having a longer delay than the previous one.
+- This helps to reduce the load on the system and prevent it from becoming
+  overwhelmed with requests.
+- The exponential backoff algorithm is often used in combination with other
+  techniques, such as jitter, to further reduce the likelihood of a
+  system being overwhelmed.
+- The exponential backoff algorithm is a simple but effective way to improve
+  the reliability of a system and prevent it from becoming overwhelmed with
+  requests.
+"""
+
 import time
 from functools import wraps
 
