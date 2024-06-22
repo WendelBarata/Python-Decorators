@@ -16,3 +16,7 @@ Stores the result of running the function for future use if necessary.
 4. Rate limit
 
 Limits the number of calls to a function within a time period.
+
+5. Exponential Backoff
+
+Technique used to prevent a system from being overwhelmed with requests.
