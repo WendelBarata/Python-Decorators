@@ -29,3 +29,42 @@ def exponentialBackoff(retries: int = 3,
             return func(*args, **kwargs)
         return wrapper
     return decorator
+
+
+###############################################################################
+# Generic example of how to use the decorator #################################
+###############################################################################
+
+
+@exponentialBackoff(retries=3, exceptions=(ValueError,))
+def yourFunction(arg):  # Replace 'yourFunction' with the name of your function
+    ...  # Replace '...' with the code of your function
+    return arg  # Replace 'arg' with the return value if needed
+
+
+@exponentialBackoff()  # Default values: retries=3, exceptions=(Exception,)
+def yourFunction(arg):  # Replace 'yourFunction' with the name of your function
+    ...  # Replace '...' with the code of your function
+    return arg  # Replace 'arg' with the return value if needed
+
+
+###############################################################################
+# Simple example of how to use the decorator ##################################
+###############################################################################
+
+
+import random
+
+
+@exponentialBackoff(exceptions=(ConnectionError,))
+def unreliableFunction():
+    if random.choice([True, False]):
+        raise ConnectionError("Connection failed")
+    return "Success"
+
+
+# Test
+print(unreliableFunction())
+
+
+###############################################################################
