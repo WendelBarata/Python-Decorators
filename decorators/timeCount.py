@@ -68,7 +68,7 @@ def timerCount(timeUnit: str = "secondes"):
     def decorator(func: callable):
         def wrapper(*args, **kwargs):
             startTime = time.time()
-            func(*args, **kwargs)
+            result = func(*args, **kwargs)
             endTime = time.time()
             timeTaken = endTime - startTime
             if timeUnit == "secondes":
@@ -77,6 +77,7 @@ def timerCount(timeUnit: str = "secondes"):
                 print(f"{func.__name__} took {timeTaken/60} minutes to run.")
             elif timeUnit == "hours":
                 print(f"{func.__name__} took {timeTaken/3600} hours to run.")
+            return result
         return wrapper
     return decorator
 
