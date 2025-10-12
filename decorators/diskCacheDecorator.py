@@ -9,6 +9,7 @@
 
 import os
 import pickle
+import time
 from functools import wraps
 
 
@@ -61,9 +62,6 @@ def yourFunctionName(arg):  # Define your function here
 ###############################################################################
 # Simple of how to use the decorator ##########################################
 ###############################################################################
-
-
-import time
 
 
 @diskCache()

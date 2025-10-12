@@ -17,6 +17,7 @@
   requests.
 """
 
+import random
 import time
 from functools import wraps
 
@@ -56,13 +57,13 @@ def exponentialBackoff(retries: int = 3,
 
 
 @exponentialBackoff(retries=3, exceptions=(ValueError,))
-def yourFunction(arg):  # Replace 'yourFunction' with the name of your function
+def yourFunctionWithRetries(arg):  # Name of your function
     ...  # Replace '...' with the code of your function
     return arg  # Replace 'arg' with the return value if needed
 
 
 @exponentialBackoff()  # Default values: retries=3, exceptions=(Exception,)
-def yourFunction(arg):  # Replace 'yourFunction' with the name of your function
+def yourFunctionDefault(arg):  # Name of your function
     ...  # Replace '...' with the code of your function
     return arg  # Replace 'arg' with the return value if needed
 
@@ -70,9 +71,6 @@ def yourFunction(arg):  # Replace 'yourFunction' with the name of your function
 ###############################################################################
 # Simple example of how to use the decorator ##################################
 ###############################################################################
-
-
-import random
 
 
 @exponentialBackoff(exceptions=(ConnectionError,))
