@@ -31,3 +31,7 @@ This is a project designed to provide a series of python decorators that can be 
 7. **Retry**
 
    Automatically retries a function a specified number of times on failure. Useful for network requests and unreliable operations.
+
+8. **Deprecated**
+
+   Marks functions as deprecated and issues warnings when called. Helps maintain backward compatibility while encouraging migration to newer alternatives.
