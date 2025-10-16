@@ -27,3 +27,7 @@ This is a project designed to provide a series of python decorators that can be 
 6. **Memoize**
 
    Caches function results in memory for faster subsequent calls. Perfect for expensive computations and recursive functions like Fibonacci.
+
+7. **Retry**
+
+   Automatically retries a function a specified number of times on failure. Useful for network requests and unreliable operations.
