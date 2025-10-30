@@ -35,3 +35,7 @@ This is a project designed to provide a series of python decorators that can be 
 8. **Deprecated**
 
    Marks functions as deprecated and issues warnings when called. Helps maintain backward compatibility while encouraging migration to newer alternatives.
+
+9. **Validate**
+
+   Validates function arguments against custom conditions before execution. Useful for input validation and enforcing constraints.
