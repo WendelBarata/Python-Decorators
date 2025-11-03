@@ -39,3 +39,7 @@ This is a project designed to provide a series of python decorators that can be 
 9. **Validate**
 
    Validates function arguments against custom conditions before execution. Useful for input validation and enforcing constraints.
+
+10. **Singleton**
+
+    Ensures a class has only one instance. Perfect for configuration managers, database connections, and loggers.
